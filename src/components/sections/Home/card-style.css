@@ -1,0 +1,44 @@
+body{
+    background: radial-gradient(#e5e5e5,#ffff,#e5e5e5);
+}
+
+.card{
+    width: 18rem;
+    height: 28rem;
+    border-radius: 10ch;
+    margin-inline: 3ch;
+    margin-right: 7ch;
+    margin-block-start: 2ch;
+}
+
+.card:hover{
+    box-shadow: 5px 5px 5px 1px rgba(0, 0, 0, 0.253) !important;
+    transform: scale(1.4);
+    border-radius: 5ch;
+
+}
+
+
+.card-text {
+    font-size: 1rem;
+    padding: 0.3rem 1.9rem;
+}
+
+.container-fluid .row{
+    padding-top: 8rem;
+    padding-right: 2rem;
+}
+
+.card-img{
+    height: 50px;
+    padding-left: 20cm;
+    padding-top: 10ch;
+
+}
+
+.card-img-top{
+    height: 30ch;
+    padding-top: 9ch;
+    padding-left: 3ch;
+    padding-right: 14ch;
+}
