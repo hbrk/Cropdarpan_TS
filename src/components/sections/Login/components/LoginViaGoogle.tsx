@@ -2,7 +2,10 @@ import React, { useRef, useState } from 'react'
 import { Form, Button, Card, Alert } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useHistory } from 'react-router-dom'
+import { GoogleLoginButton } from 'react-social-login-buttons'
+
 import '../Login.css'
+
 export default function Login() {
   // const emailRef = useRef<HTMLInputElement>(null)
   // const passwordRef = useRef<HTMLInputElement>(null)
@@ -33,7 +36,7 @@ export default function Login() {
                 </h1>
                 {error && <Alert variant="danger">{error}</Alert>}
                 <Form onSubmit={handleSubmit}>
-                  <Button
+                  {/* <Button
                     disabled={loading}
                     className="w-100"
                     style={{
@@ -44,17 +47,15 @@ export default function Login() {
                       borderStyle: 'solid',
                     }}
                     type="submit"
-                  >
-                    <h4>
-                      <b className="fab fa-google"> &nbsp;&nbsp;&nbsp; Login</b>
-                    </h4>
-                  </Button>
+                  > */}
+                  <GoogleLoginButton onClick={() => handleSubmit} />
+                  {/* </Button> */}
                   <br />
                   <br />
                   <br />
                   <div className="w-100">
                     <h2 style={{ color: '#d8fa82' }}>
-                      <b>____________ or login with ____________</b>{' '}
+                      <b>____________ or ____________</b>{' '}
                     </h2>
                     <br />
                   </div>

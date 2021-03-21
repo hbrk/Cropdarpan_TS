@@ -2,7 +2,10 @@ import React, { useRef, useState } from 'react'
 import { Form, Button, Card, Alert } from 'react-bootstrap'
 import { useAuth } from '../contexts/AuthContext'
 import { Link, useHistory } from 'react-router-dom'
+import { GoogleLoginButton } from 'react-social-login-buttons'
+
 import '../Login.css'
+
 export default function Login() {
   const emailRef = useRef<HTMLInputElement>(null)
   const passwordRef = useRef<HTMLInputElement>(null)
@@ -98,7 +101,7 @@ export default function Login() {
                   <br />
                   <div className="w-100">
                     <h2 style={{ color: '#d8fa82' }}>
-                      <b>__________ or login with __________</b>{' '}
+                      <b>__________or__________</b>{' '}
                     </h2>
                   </div>
                   <br />
@@ -124,7 +127,7 @@ export default function Login() {
                     </button>
                     <br />
                     <br />
-                    <button
+                    {/* <button
                       className="w-100 btn-outline-success"
                       style={{
                         backgroundColor: 'white',
@@ -142,7 +145,10 @@ export default function Login() {
                           </b>{' '}
                         </h4>
                       </Link>
-                    </button>
+                    </button> */}
+                    <Link to="/loginViaGoogle">
+                      <GoogleLoginButton />
+                    </Link>
                   </div>
                 </Form>
               </div>
